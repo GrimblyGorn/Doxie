@@ -1,5 +1,5 @@
 # New GUI
-<img src="https://github.com/gordon-matt/Doxie/blob/master/_Misc/new_GUI" alt="GUI" />
+<img src="https://github.com/GrimblyGorn/Doxie/blob/master/_Misc/new_GUI" alt="GUI" />
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=gordon_matt%40live%2ecom&lc=AU&currency_code=AUD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
@@ -72,4 +72,3 @@ If you find this project helpful, consider buying me a cup of coffee.  :-)
 - **Bitcoin**: 1EeDfbcqoEaz6bbcWsymwPbYv4uyEaZ3Lp
 - **Ethereum**: 0x277552efd6ea9ca9052a249e781abf1719ea9414
 - **Litecoin**: LRUP8hukWGXRrcPK6Tm7iUp9vPvnNNt3uz
-
