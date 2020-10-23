@@ -1,6 +1,6 @@
 # GUI Improvements / Enhancements
 
-####Added:
+#### Added:
 - New button to toggle recursive searching through directories. Default is still to only search the folder given.
 - New buttons to Select All and Clear All assemblies from the list
 - New button to Reset the GUI
@@ -12,20 +12,20 @@
 - A few aesthetic improvements were made as well (Reset All button is Light Red, Generate button is Light Green, toggling Recursion alternates the red/green true/false text next to it, etc...)
 - The text instructions in the GUI have also been updated to reflect these changes as needed.
 
-####Issues:
+#### Issues:
  - Allowing for the filename to be changed caused the Console solution to break. This is due to the new field I added to the Generate method in JsonHelpFileGenerator.cs
 I didn't bother fixing the problem since the console app is of no interest to me currently.
  - Pasting a path into the Path textbox only works the first time. Subsequent pasting will not result in the list updating to reflect the new directory. Not sure offhand why but it's likely improperly handled Event related stuff :)
 - Dropping a file does not add the files path to the Path textbox. Instead it is simply ignored. Would be nice if it did that but I haven't bothered to figure out why it doesn't as of now.
  - Likely something else I would guess but that's all I can think of for now.
 
-####Unchanged:
+#### Unchanged:
 - Sadly I have not yet changed any of the underlying functionality as to how this generates .json files. Ideally it would work to some degree on assemblies with no XML files avaliable, and it should work on assemblies that have XML files that are not correct or incomplete as well. There are other minor issues with this and it's concerns for the XML files that would be nice to have resolved as well, but I'm not sure if I will get around to fixing these issues or be able to if I find the time to try my hand at it.
 
 # New GUI
 <img src="https://github.com/GrimblyGorn/Doxie/blob/master/_Misc/new_GUI.png" alt="GUI" />
 
-####TODO:
+#### TODO:
 
  - Fix the Browse option to retain the last location selected.
  - Fix the Recursive toggle button to have better Event handling than it currently does.
