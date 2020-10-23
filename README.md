@@ -1,26 +1,25 @@
 # GUI Improvements / Enhancements
 
 #### Added:
-- New button to toggle recursive searching through directories. Default is still to only search the folder given.
-- New buttons to Select All and Clear All assemblies from the list
-- New button to Reset the GUI
-- New field to enter an alternate output filename (default name is now docs.json). Extension is still always .json
-- New field to enter an alternate output Path (does not require "\" at the end but works with it as well). This defaults to blank and outputs to the path where the assemblies are located. If given an alternate path it will remain and not be reset when the Reset All button is clicked.
-- Drag-n-Drop functionality added to the GUI if you drop a directory it will now correctly add the path to the Path textbox and update the list of assemblies accordingly (Recursion should be selected prior to this if you wish to utilize it). This will also trigger an update of the assemblies list if you Drop a new directory in the GUI, so you can rapidly output multiple .json files to a unified location now without Resetting the App or closing it. Just assign an output path (if you want), then drop a folder, select the assemblies you want, set a name (if you want or if they're going to a unified directory), generate, drop another folder, select assemblies, set a name, generate, etc...
-- Pasting a path into the Path textbox will now correctly update the list of assemblies accordingly (Recursion works with this if selected before as well).
-- Changed the list of assemblies to only display the filename instead of the full path and filename. This is cleaner and more functional than before but can be somewhat problematic in cases where recursion is used and there are duplicate assemblies involved. However, you can now always see the file you are selecting where before if the path was too long the filename was not visible and there was no way to see it.
-- A few aesthetic improvements were made as well (Reset All button is Light Red, Generate button is Light Green, toggling Recursion alternates the red/green true/false text next to it, etc...)
-- The text instructions in the GUI have also been updated to reflect these changes as needed.
+ - New button to toggle recursive searching through directories. Default is still to only search the folder given.
+ - New buttons to Select All and Clear All assemblies from the list
+ - New button to Reset the GUI
+ - New field to enter an alternate output filename (default name is now docs.json). Extension is still always .json
+ - New field to enter an alternate output Path (does not require "\" at the end but works with it as well). This defaults to blank and outputs to the path where the assemblies are located. If given an alternate path it will remain and not be reset when the Reset All button is clicked.
+ - Drag-n-Drop functionality added to the GUI if you drop a directory it will now correctly add the path to the Path textbox and update the list of assemblies accordingly (Recursion should be selected prior to this if you wish to utilize it). This will also trigger an update of the assemblies list if you Drop a new directory in the GUI, so you can rapidly output multiple .json files to a unified location now without Resetting the App or closing it. Just assign an output path (if you want), then drop a folder, select the assemblies you want, set a name (if you want or if they're going to a unified directory), generate, drop another folder, select assemblies, set a name, generate, etc...
+ - Pasting a path into the Path textbox will now correctly update the list of assemblies accordingly (Recursion works with this if selected before as well).
+ - Changed the list of assemblies to only display the filename instead of the full path and filename. This is cleaner and more functional than before but can be somewhat problematic in cases where recursion is used and there are duplicate assemblies involved. However, you can now always see the file you are selecting where before if the path was too long the filename was not visible and there was no way to see it.
+ - A few aesthetic improvements were made as well (Reset All button is Light Red, Generate button is Light Green, toggling Recursion alternates the red/green true/false text next to it, etc...)
+ - The text instructions in the GUI have also been updated to reflect these changes as needed.
 
 #### Issues:
  - Allowing for the filename to be changed caused the Console solution to break. This is due to the new field I added to the Generate method in JsonHelpFileGenerator.cs
-I didn't bother fixing the problem since the console app is of no interest to me currently.
  - Pasting a path into the Path textbox only works the first time. Subsequent pasting will not result in the list updating to reflect the new directory. Not sure offhand why but it's likely improperly handled Event related stuff :)
-- Dropping a file does not add the files path to the Path textbox. Instead it is simply ignored. Would be nice if it did that but I haven't bothered to figure out why it doesn't as of now.
+ - Dropping a file does not add the files path to the Path textbox. Instead it is simply ignored. Would be nice if it did that but I haven't bothered to figure out why it doesn't as of now.
  - Likely something else I would guess but that's all I can think of for now.
 
 #### Unchanged:
-- Sadly I have not yet changed any of the underlying functionality as to how this generates .json files. Ideally it would work to some degree on assemblies with no XML files avaliable, and it should work on assemblies that have XML files that are not correct or incomplete as well. There are other minor issues with this and it's concerns for the XML files that would be nice to have resolved as well, but I'm not sure if I will get around to fixing these issues or be able to if I find the time to try my hand at it.
+ - Sadly I have not yet changed any of the underlying functionality as to how this generates .json files. Ideally it would work to some degree on assemblies with no XML files available, and it should work on assemblies that have XML files that are not correct or incomplete as well. There are other minor issues with this and it's concerns for the XML files that would be nice to have resolved as well, but I'm not sure if I will get around to fixing these issues, or be able to even if I find the time to try my hand at it.
 
 # New GUI
 <img src="https://github.com/GrimblyGorn/Doxie/blob/master/_Misc/new_GUI.png" alt="GUI" />
@@ -35,7 +34,8 @@ I didn't bother fixing the problem since the console app is of no interest to me
  - Fix the XML dependency so that it will still generate a JSON file for assemblies that have malformed, incomplete, incorrect, or no XML file. Even if that only offers partial coverage over the assembly it's still better than nothing.
  - Probably a few other things not mentioned here or up above in the Issues area I laid out previously.  
 
-
+___
+# Original Description
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=gordon_matt%40live%2ecom&lc=AU&currency_code=AUD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
