@@ -31,7 +31,7 @@
  - Fix the Path textbox to have better Event handling than it currently does.
  - Fix the Drag & Drop function to fetch the path of a file dropped in the GUI so it doesn't always have to be a Folder or Directory that's dropped in.
  - Add an error output field to the GUI to give visual feedback on what is happening when dealing with incorrect assemblies or assembly XML files that throw issues within the parser.
- - Fix the XML dependency so that it will still generate a JSON file for assemblies that have malformed, incomplete, incorrect, or no XML file. Even if that only offers partial coverage over the assembly it's still better than nothing.
+ - Fix the XML dependency so that it will still generate a JSON file for assemblies that have malformed, incomplete, incorrect, or no XML file. Even if that only offers partial coverage over the assembly it's still better than nothing. For example this library does not work despite having XML documentation available [C-Sharp-Algorithms](https://github.com/aalhour/C-Sharp-Algorithms) and this one with no documentation [LunarParser](https://github.com/Relfos/LunarParser). I feel that both of these should still be an option and any similar libraries as well. 
  - Probably a few other things not mentioned here or up above in the Issues area I laid out previously.  
 
 ___
