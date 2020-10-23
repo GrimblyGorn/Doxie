@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace Doxie.HelpFileGenerator.GUI
 {
+    /// <summary>
+    /// The program.
+    /// </summary>
     internal static class Program
     {
         /// <summary>

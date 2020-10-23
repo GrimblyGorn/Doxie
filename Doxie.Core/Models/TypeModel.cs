@@ -8,6 +8,9 @@ using Newtonsoft.Json;
 
 namespace Doxie.Core.Models
 {
+    /// <summary>
+    /// The type model.
+    /// </summary>
     public class TypeModel : BaseCommentsModel
     {
         public TypeModel()

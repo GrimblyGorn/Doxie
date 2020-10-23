@@ -7,6 +7,9 @@ using Newtonsoft.Json;
 
 namespace Doxie.Core.Models
 {
+    /// <summary>
+    /// The parameter model.
+    /// </summary>
     public class ParameterModel
     {
         [JsonProperty]

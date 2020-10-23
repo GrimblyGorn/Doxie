@@ -5,6 +5,9 @@
 
 namespace Doxie.Core.Models
 {
+    /// <summary>
+    /// The member summary model.
+    /// </summary>
     public class MemberSummaryModel
     {
         public string Description { get; set; }

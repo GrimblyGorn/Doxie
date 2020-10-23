@@ -17,6 +17,9 @@ using Doxie.Core.Models;
 
 namespace Doxie.Core.XmlComments
 {
+    /// <summary>
+    /// The doc parser.
+    /// </summary>
     public class DocParser
     {
         private XmlDocCommentReader xmlDocCommentReader;

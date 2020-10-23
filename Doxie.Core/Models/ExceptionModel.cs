@@ -5,6 +5,9 @@
 
 namespace Doxie.Core.Models
 {
+    /// <summary>
+    /// The exception model.
+    /// </summary>
     public class ExceptionModel
     {
     }

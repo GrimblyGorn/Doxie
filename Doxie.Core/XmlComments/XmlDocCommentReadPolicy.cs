@@ -29,6 +29,9 @@ using System.Xml.Schema;
 
 namespace Doxie.Core.XmlComments
 {
+    /// <summary>
+    /// The xml doc comment read policy.
+    /// </summary>
     public class XmlDocCommentReadPolicy : IXmlDocCommentReadPolicy
     {
         private readonly XmlReaderSettings xmlReaderSettings;
@@ -72,6 +75,9 @@ namespace Doxie.Core.XmlComments
         }
     }
 
+    /// <summary>
+    /// The xml doc comment names.
+    /// </summary>
     internal class XmlDocCommentNames
     {
         internal static readonly string DocElement = "doc";

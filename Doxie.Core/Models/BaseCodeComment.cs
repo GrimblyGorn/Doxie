@@ -9,6 +9,9 @@ using Newtonsoft.Json;
 
 namespace Doxie.Core.Models
 {
+    /// <summary>
+    /// The base code comment.
+    /// </summary>
     public abstract class BaseCodeComment : BaseCommentsModel
     {
         [JsonProperty]
@@ -24,7 +27,7 @@ namespace Doxie.Core.Models
         public string ParentClass { get; set; }
 
         /// <summary>
-        /// Returns the parameters types, comma seperated.
+        /// Returns the parameters types, comma separated.
         /// </summary>
         /// <returns></returns>
         public string ParameterTypes()

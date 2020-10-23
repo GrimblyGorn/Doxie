@@ -5,6 +5,9 @@
 
 namespace Doxie.Core.Models
 {
+    /// <summary>
+    /// The event model.
+    /// </summary>
     public class EventModel
     {
     }

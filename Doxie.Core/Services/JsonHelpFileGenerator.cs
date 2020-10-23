@@ -7,14 +7,17 @@ using Extenso;
 
 namespace Doxie.Core.Services
 {
+    /// <summary>
+    /// The json help file generator.
+    /// </summary>
     public static class JsonHelpFileGenerator
     {
         private static DocParser docParser = new DocParser();
 
-        public static void Generate(IEnumerable<string> selectedAssemblyPaths, string outputPath)
+        public static void Generate(IEnumerable<string> selectedAssemblyPaths, string outputPath, string file_Name)
         {
             var assemblies = GetAssemblies(selectedAssemblyPaths);
-            string outputFileName = Path.Combine(outputPath, "assemblies.json");
+            string outputFileName = Path.Combine(outputPath, file_Name + ".json");
             assemblies.JsonSerialize().ToFile(outputFileName);
         }
 

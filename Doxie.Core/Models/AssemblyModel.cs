@@ -8,6 +8,9 @@ using System.Collections.Generic;
 
 namespace Doxie.Core.Models
 {
+    /// <summary>
+    /// The assembly model.
+    /// </summary>
     public class AssemblyModel
     {
         public string FileName { get; set; }

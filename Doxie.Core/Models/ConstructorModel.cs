@@ -7,6 +7,9 @@ using Newtonsoft.Json;
 
 namespace Doxie.Core.Models
 {
+    /// <summary>
+    /// The constructor model.
+    /// </summary>
     public class ConstructorModel : BaseCodeComment
     {
         [JsonProperty]

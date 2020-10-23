@@ -8,6 +8,9 @@ using System.Linq;
 
 namespace Doxie.Core.Models
 {
+    /// <summary>
+    /// The namespace model.
+    /// </summary>
     public class NamespaceModel
     {
         public NamespaceModel()

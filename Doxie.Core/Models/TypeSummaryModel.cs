@@ -5,6 +5,9 @@
 
 namespace Doxie.Core.Models
 {
+    /// <summary>
+    /// The type summary model.
+    /// </summary>
     public class TypeSummaryModel
     {
         public string FullName { get; set; }
