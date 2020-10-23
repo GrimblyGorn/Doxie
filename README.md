@@ -1,3 +1,6 @@
+# New GUI
+<img src="https://github.com/gordon-matt/Doxie/blob/master/_Misc/2020-10-23 13_06_18-GitHub Desktop.png" alt="GUI" width="603" height="727" />
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=gordon_matt%40live%2ecom&lc=AU&currency_code=AUD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
 <img src="https://github.com/gordon-matt/Doxie/blob/master/_Misc/logos/Doxie.png" alt="Logo" width="250" />
