@@ -78,8 +78,8 @@
             this.txtPath.TabIndex = 3;
             this.txtPath.ModifiedChanged += new System.EventHandler(this.txtPath_CausesValidationChanged);
             this.txtPath.CausesValidationChanged += new System.EventHandler(this.txtPath_CausesValidationChanged);
-            this.txtPath.DragDrop += new System.Windows.Forms.DragEventHandler(this.txtFolderPath_DragDrop);
-            this.txtPath.DragEnter += new System.Windows.Forms.DragEventHandler(this.txtFolderPath_DragEnter);
+            this.txtPath.DragDrop += new System.Windows.Forms.DragEventHandler(this.Doxie_DragDrop);
+            this.txtPath.DragEnter += new System.Windows.Forms.DragEventHandler(this.Doxie_DragEnter);
             // 
             // lblPath
             // 
@@ -101,8 +101,9 @@
             this.clbFiles.Name = "clbFiles";
             this.clbFiles.Size = new System.Drawing.Size(530, 469);
             this.clbFiles.TabIndex = 5;
-            this.clbFiles.DragDrop += new System.Windows.Forms.DragEventHandler(this.txtFolderPath_DragDrop);
-            this.clbFiles.DragEnter += new System.Windows.Forms.DragEventHandler(this.txtFolderPath_DragEnter);
+            this.clbFiles.SelectedIndexChanged += new System.EventHandler(this.clbFiles_SelectedIndexChanged);
+            this.clbFiles.DragDrop += new System.Windows.Forms.DragEventHandler(this.Doxie_DragDrop);
+            this.clbFiles.DragEnter += new System.Windows.Forms.DragEventHandler(this.Doxie_DragEnter);
             // 
             // Select_All
             // 
@@ -186,6 +187,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(163, 595);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
@@ -195,6 +197,7 @@
             // outFolder
             // 
             this.outFolder.AutoSize = true;
+            this.outFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outFolder.Location = new System.Drawing.Point(110, 626);
             this.outFolder.Name = "outFolder";
             this.outFolder.Size = new System.Drawing.Size(109, 13);
@@ -218,7 +221,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 652);
+            this.ClientSize = new System.Drawing.Size(553, 648);
             this.Controls.Add(this.outputBox);
             this.Controls.Add(this.outFolder);
             this.Controls.Add(this.label1);
@@ -238,8 +241,8 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doxie Help File Generator";
-            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.txtFolderPath_DragDrop);
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.txtFolderPath_DragEnter);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Doxie_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Doxie_DragEnter);
             this.ResumeLayout(false);
             this.PerformLayout();
 
