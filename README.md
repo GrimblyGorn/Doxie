@@ -12,6 +12,7 @@
  - A few aesthetic improvements were made as well (Reset All button is Light Red, Generate button is Light Green, toggling Recursion alternates the red/green true/false text next to it, buttons toggle off and on at logical times, etc...)
  - The text instructions in the GUI have also been updated to reflect these changes as needed.
  - I also added a new Error handler pop-up window that has select-able text, a Copy-to-Clipboard button with a confirmation text, and stores a numbered list of any application errors thrown with a button to clear the list if needed, and a button to exit the error log and return back to the application.
+ - I updated the GUI to compile against .NET 4.8 Framework now. Not really sure why :)
 
 #### Known Issues:
  - Allowing for the filename to be changed caused the Console solution to break. This is due to the new field I added to the Generate method in JsonHelpFileGenerator.cs. I simply removed it from the build list so it's no longer in my project and quit throwing errors I didn't plan to fix.
@@ -43,6 +44,7 @@
  - As of now I have not tested the Browse button or any of its functionality in some time so it may or may not work. Though it still should. I think...
  - Adding a list of assemblies long enough to need scroll bars may or may not be handled or cause issues. This is entirely unknown to me as I haven't tested that at all so far.
  - The results generated from using Recursion may or may not be valid as I haven't found the time yet to actually look at them. Though it does seem to be generating things correctly on a surface level that may not be the case upon really inspecting the results.
+ - I suspect that this does not work on any of the assemblies compiled against any version of .NET Core, but I'm not certain of that right now. I do think it works on all versions of .NET Framework and .NET Standard though. But I haven't, to my knowledge, tested it against really old versions like Framework 2.0 and below for example, so there is a chance it may not work on older versions of both that I'm not aware of currently. 
  - That's all I can think of for now :)   
 
 ___
