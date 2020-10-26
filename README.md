@@ -23,9 +23,8 @@
 #### Unchanged:
  - Sadly I have not yet changed any of the underlying functionality as to how this generates .json files. Ideally it would work to some degree on assemblies with no XML files available, and it should work on assemblies that have XML files that are not correct or incomplete as well. There are other minor issues with this and it's concerns for the XML files that would be nice to have resolved as well, but I'm not sure if I will get around to fixing these issues, or be able to even if I find the time to try my hand at it.
 
-# New GUI
+# New Enhanced GUI & Custom Error Window
 <img src="https://github.com/GrimblyGorn/Doxie/blob/master/_Misc/new_GUI.png" alt="GUI" />
-# New Error Window
 <img src="https://github.com/GrimblyGorn/Doxie/blob/master/_Misc/New_ErrorWindow.png" alt="GUI" />
 
 #### TODO:
