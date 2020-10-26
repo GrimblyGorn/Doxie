@@ -6,31 +6,32 @@
  - New button to Reset the GUI
  - New field to enter an alternate output filename (default name is now docs.json). Extension is still always .json
  - New field to enter an alternate output Path (does not require "\" at the end but works with it as well). This defaults to blank and outputs to the path where the assemblies are located. If given an alternate path it will remain and not be reset when the Reset All button is clicked.
- - Drag-n-Drop functionality added to the GUI if you drop a directory it will now correctly add the path to the Path textbox and update the list of assemblies accordingly (Recursion should be selected prior to this if you wish to utilize it). This will also trigger an update of the assemblies list if you Drop a new directory in the GUI, so you can rapidly output multiple .json files to a unified location now without Resetting the App or closing it. Just assign an output path (if you want), then drop a folder, select the assemblies you want, set a name (if you want or if they're going to a unified directory), generate, drop another folder, select assemblies, set a name, generate, etc...
- - Pasting a path into the Path textbox will now correctly update the list of assemblies accordingly (Recursion works with this if selected before as well).
- - Changed the list of assemblies to only display the filename instead of the full path and filename. This is cleaner and more functional than before but can be somewhat problematic in cases where recursion is used and there are duplicate assemblies involved. However, you can now always see the file you are selecting where before if the path was too long the filename was not visible and there was no way to see it.
- - A few aesthetic improvements were made as well (Reset All button is Light Red, Generate button is Light Green, toggling Recursion alternates the red/green true/false text next to it, etc...)
+ - Drag-n-Drop functionality added to the GUI if you drop a directory or file it will now correctly add that path to the Path textbox and update the list of assemblies accordingly (Recursion should be selected prior to this if you wish to utilize it). This will also trigger an update of the assemblies list if you Drop a new directory in the GUI by overwriting the previous selection, so you can rapidly output multiple .json files to a unified location now without Resetting the App or closing it. Just assign an output path (if you want), then drop a folder, select the assemblies you want, set a name (if you want or if they're going to a unified directory), generate, drop another folder, select assemblies, set a name, generate, etc...
+ - Pasting a path into the Path textbox will now correctly update the list of assemblies accordingly (Recursion works with this if selected before as well). However, pasting a path including a file does not cause the list to update, directory paths are the only thing that works.
+ - Changed the list of assemblies to only display the filename instead of the full path and filename. This is cleaner and more functional than before but can be somewhat problematic in cases where recursion is used and there are duplicate assemblies involved. However, you can now always see the file you are selecting where before if the path was too long the filename was not visible and there was no way to see it. Ideally this would display the folder the assembly is in and the filename instead of the entire path.
+ - A few aesthetic improvements were made as well (Reset All button is Light Red, Generate button is Light Green, toggling Recursion alternates the red/green true/false text next to it, buttons toggle off and on at logical times, etc...)
  - The text instructions in the GUI have also been updated to reflect these changes as needed.
+ - I also added a new Error handler pop-up window that has select-able text, a Copy-to-Clipboard button with a confirmation text, and stores a numbered list of any application errors thrown with a button to clear the list if needed.
 
 #### Issues:
- - Allowing for the filename to be changed caused the Console solution to break. This is due to the new field I added to the Generate method in JsonHelpFileGenerator.cs
- - Pasting a path into the Path textbox only works the first time. Subsequent pasting will not result in the list updating to reflect the new directory. Not sure offhand why but it's likely improperly handled Event related stuff :)
- - Dropping a file does not add the files path to the Path textbox. Instead it is simply ignored. Would be nice if it did that but I haven't bothered to figure out why it doesn't as of now.
- - Likely something else I would guess but that's all I can think of for now.
+ - Allowing for the filename to be changed caused the Console solution to break. This is due to the new field I added to the Generate method in JsonHelpFileGenerator.cs. I simply removed it from the build list so it's no longer in my project and quit throwing errors I didn't plan to fix.
+ - Pasting a path into the Path textbox only works the first time. Subsequent pasting will not result in the list updating to reflect the new directory.  Even using the reset button doesn't fix this. The only way to paste again right now is to close and re-open the app. Not sure offhand why but it's likely improperly handled Event related stuff :)
+ - Likely a few other bugs or quirks I would guess but that's all I can think of for now.
 
 #### Unchanged:
  - Sadly I have not yet changed any of the underlying functionality as to how this generates .json files. Ideally it would work to some degree on assemblies with no XML files available, and it should work on assemblies that have XML files that are not correct or incomplete as well. There are other minor issues with this and it's concerns for the XML files that would be nice to have resolved as well, but I'm not sure if I will get around to fixing these issues, or be able to even if I find the time to try my hand at it.
 
 # New GUI
 <img src="https://github.com/GrimblyGorn/Doxie/blob/master/_Misc/new_GUI.png" alt="GUI" />
+# New Error Window
+<img src="https://github.com/GrimblyGorn/Doxie/blob/master/_Misc/New_ErrorWindow.png" alt="GUI" />
 
 #### TODO:
 
  - Fix the Browse option to retain the last location selected.
- - Fix the Recursive toggle button to have better Event handling than it currently does.
  - Fix the Path textbox to have better Event handling than it currently does.
- - Fix the Drag & Drop function to fetch the path of a file dropped in the GUI so it doesn't always have to be a Folder or Directory that's dropped in.
- - Add an error output field to the GUI to give visual feedback on what is happening when dealing with incorrect assemblies or assembly XML files that throw issues within the parser.
+ - Extend the error handler to catch error thrown from the CORE assembly as well as the application instead of just the application.
+ - Add a Split / Combine toggle button that either outputs a single (Combined) JSON or Splits the selected assemblies by outputting as JSON for each of them. I actually made a fairly time consuming attempt at this yesterday but had to revert back tot this currently version as I simply could not get it working properly.
  - Fix the XML dependency so that it will still generate a JSON file for assemblies that have malformed, incomplete, incorrect, or no XML file. Even if that only offers partial coverage over the assembly it's still better than nothing. For example this library does not work despite having XML documentation available [C-Sharp-Algorithms](https://github.com/aalhour/C-Sharp-Algorithms) possibly because it's built on .Net Core 2.0? and this one with no documentation [LunarParser](https://github.com/Relfos/LunarParser) which we know won't work but still should. I feel that both of these should still be an option and any similar libraries as well. So, maybe I'll try to make that happen at some point :)
  - Probably a few other things not mentioned here or up above in the Issues area I laid out previously.  
 
