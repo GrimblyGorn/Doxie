@@ -16,7 +16,7 @@
 
 #### Known Issues:
  - Allowing for the filename to be changed caused the Console solution to break. This is due to the new field I added to the Generate method in JsonHelpFileGenerator.cs. I simply removed it from the build list so it's no longer in my project and quit throwing errors I didn't plan to fix.
- - Pasting a path into the Path textobox that includes a filename throws an error and does not update the list of files like it should. 
+ - Pasting a path into the Path textbox that includes a filename throws an error and does not update the list of files like it should. 
  - Pasting a path into the Path textbox only works the first time. Subsequent pasting will not result in the list updating to reflect the new directory.  Even using the reset button doesn't fix this. The only way to paste again right now is to close and re-open the app. Not sure offhand why but it's likely improperly handled Event related stuff :)
  - Likely a few other bugs or quirks I would guess but that's all I can come up with for now.
 
